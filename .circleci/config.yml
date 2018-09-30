@@ -28,6 +28,7 @@ jobs:
           command: |
             chmod +x run.sh
             ./run.sh
+            cp task_0.html /root/project/test-reports/task_0.html
 
       - store_artifacts:
           path: test-reports
