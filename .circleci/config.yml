@@ -18,16 +18,13 @@ jobs:
     steps:
       - checkout
 
-      - run:
-          name: install dependencies
-          command: |
-            conda env create -f myenv.yml -n environment
-            source activate environment
+#       - run:
+#           name: install dependencies
+#           command: |
+#             conda env create -f myenv.yml -n environment
+#             source activate environment
 
-      - run: |
-          cd ..
-          chmod +x run.sh
-          ./run.sh
+      - run: ./run.sh
 
       - store_artifacts:
           path: test-reports
