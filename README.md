@@ -1,5 +1,6 @@
 # Репозиторий с заданиями по курсу "Технология воспроизводимых научных исследований"
 ## by Андрей Гончар.
+[![CircleCI](https://circleci.com/gh/ExplosiveJam/mipt_ToRSR.svg?style=svg)](https://circleci.com/gh/ExplosiveJam/mipt_ToRSR)
 
 Чтобы конвертировать task_0.ipynb в .html формат, после скачивания данного репозитория нужно выполнить следующие три команды:
 ```
