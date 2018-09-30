@@ -24,9 +24,10 @@ jobs:
 #             conda env create -f myenv.yml -n environment
 #             source activate environment
 
-      - run: |
-        chmod +x run.sh
-        ./run.sh
+      - run: 
+          command: |
+            chmod +x run.sh
+            ./run.sh
 
       - store_artifacts:
           path: test-reports
