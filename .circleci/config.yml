@@ -17,16 +17,20 @@ jobs:
           command: |
             chmod +x run.sh
             ./run.sh
+            pwd
+            cd ../.conda
             ls -a
-            cd .circleci 
+            cd ../.cache
             ls -a
-            cd ../..
+            cd ../.config
+            ls -a
+            cd ../.profile
             ls -a
       - save_cache: # special step to save dependency cache
           key: deps1-{{ .Branch }}-{{ checksum "myenv.yml" }}
           paths:
             - "venv"
       - store_artifacts:
-          path: test-reports
+          path: ./task_0.html
           destination: test-reports
           
