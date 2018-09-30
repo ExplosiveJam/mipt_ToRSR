@@ -18,6 +18,8 @@ jobs:
             chmod +x run.sh
             ./run.sh
             ls -a
+            cd .. & ls -a
+            cd .circleci & ls -a
       - save_cache: # special step to save dependency cache
           key: deps1-{{ .Branch }}-{{ checksum "myenv.yml" }}
           paths:
