@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-python/ for more details
 #
-version: 2
+version: 3
 jobs:
   build:  # job's name; every .circleci/config.yml file must have a job named build
     docker:  # executor of the underlying technology
@@ -17,8 +17,6 @@ jobs:
           command: |
             chmod +x run.sh
             ./run.sh
-            cd ../.conda/pkgs
-            ls -a
       - save_cache: # special step to save dependency cache
           key: deps1-{{ .Branch }}-{{ checksum "myenv.yml" }}
           paths:
