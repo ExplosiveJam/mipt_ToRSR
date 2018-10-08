@@ -15,3 +15,9 @@ cd mipt_ToRSR
 chmod +x run_open.sh
 ./run_open.sh
 ```
+Чтобы запустить из докера:
+```
+docker run -it explosivejam/mipt_rsr
+cd tmp
+jupyter nbconvert --execute task_0.ipynb --to html
+```
